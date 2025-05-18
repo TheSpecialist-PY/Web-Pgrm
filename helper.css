@@ -1,0 +1,158 @@
+/* Ensure html and body take up full height and have no default margins/padding */
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('workout2.png');
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background-color: hsl(54, 88%, 51%);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .banner {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .banner nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .banner nav ul li {
+    margin: 5px 15px;
+  }
+  
+  .banner nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Updated form section to reduce excess space */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced spacing between inputs */
+    margin: 0;
+    padding: 0;
+  }
+  
+  label {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.25rem; /* Reduce space under label */
+    max-width: 100%;
+  }
+  
+  select,
+  button[type="submit"] {
+    padding: 0.5rem; /* Reduced internal padding */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem; /* Slight margin above button */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .result {
+    margin-top: 2rem;
+    background-color: #e7f3ff;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #333;
+    text-align: left;
+  }
+  
+  .result h2 {
+    margin-top: 0;
+    color: #0056b3;
+  }
+  
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .video-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .video-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .video-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-container {
+    flex: 1;
+    max-width: 400px;
+    padding: 0.5rem; /* Reduced padding inside form container */
+  }
+  

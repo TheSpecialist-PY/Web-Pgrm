@@ -1,0 +1,105 @@
+header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  display: block;
+  
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.977);
+  margin: 0;
+}
+
+
+
+h1{
+  background-color: transparent;
+  color: rgb(235, 239, 18);
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%; /* Make header span the full width */
+  position: relative;
+  z-index: 10;
+}
+
+.banner {
+  width: 100%; /* Ensure the banner spans the full width */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color to make the banner text readable */
+  padding: 10px 0; /* Reduce padding to bring banner closer */
+  text-align: center;
+  margin-top: 0; /* Set margin-top to 0 to bring the banner closer to "About Us" */
+}
+
+.banner nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.banner nav ul li {
+  margin: 0 15px;
+}
+
+.banner nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: black;
+  color: #333;
+  padding: 20px;
+}
+
+form {
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select {
+  width: 99%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d31e97;
+}

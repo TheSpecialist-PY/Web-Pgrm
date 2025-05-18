@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Form</title>
+  <link rel="stylesheet" href="membership-form.css">
+  <script src="membership.js" defer></script>
+  <script src="membership2.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="Iron-Temple-banner.png" alt="The Iron Temple Banner" class="header-img">
+    <h1 class="center-text">Membership Form</h1>
+  </header>
+  <div class="banner">
+    <nav>
+        <ul>
+             <li><a href="about-us.html">Home</a></li>
+            <li><a href="workout-helper.html">Workout Planner</a></li>
+            <li><a href="membership-form.html">Membership</a></li>
+        </ul>
+    </nav>
+</div>
+  <form id="membershipForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br>
+
+    <label for="plan">Membership Package:</label>
+    <select id="plan" name="plan" required>
+      <option value="">Select a plan</option>
+      <option value="1">Plan 1 Basic ($325)</option>
+      <option value="2">Plan 2 Standard ($480)</option>
+      <option value="3">Plan 3 Premium ($660)</option>
+    </select><br>
+
+
+    <section id="paySection">
+      <h2>Payment Form</h2>
+      
+
+      <fieldset id="payment" name="payment">        
+         <fieldset id="creditcard">
+            <legend>Credit Information</legend>
+
+            <label for="cardName">Name*</label>
+            <input name="cardName" id="cardName" required type="text" />              
+
+            <label>Credit Card*</label>
+            <fieldset id="cards">
+               <label class="cardLabel">
+                  <input name="credit" value="amex" type="radio" required />               
+                  <span>American Express</span>
+               </label>
+               <label class="cardLabel">               
+                  <input name="credit" value="discover" type="radio" />
+                  <span>Discover</span>
+               </label>
+               <label class="cardLabel">                              
+                  <input name="credit" value="master" type="radio"  />
+                  <span>MasterCard</span>
+               </label>
+               <label class="cardLabel">                                    
+                  <input name="credit" value="visa" type="radio"  />
+                  <span>Visa</span>
+               </label>
+            </fieldset>          
+
+            <label for="cardNumber">Credit Card Number*</label>
+            <input name="cardNumber" id="cardNumber" required type="text"
+                   pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+
+            <label for="expMonth">Expiration Date*</label>
+            <select id="expMonth" name="expMonth">
+               <option value="mm">mm</option>
+               <option value="01">01</option>
+               <option value="02">02</option>
+               <option value="03">03</option>
+               <option value="04">04</option>
+               <option value="05">05</option>
+               <option value="06">06</option>
+               <option value="07">07</option>
+               <option value="08">08</option>
+               <option value="09">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+            <span id="separator"> / </span>
+            <select id="expYear" name="expYear">
+               <option value="yy">yy</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+            </select>            
+
+            <label for="cvc">CVC*</label>
+            <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+         </fieldset>
+      </fieldset>
+
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

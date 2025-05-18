@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Decision Helper</title>
+  <link href="helper.css" rel="stylesheet" />
+</head>
+<div class="container">
+    <div class="side-by-side">
+  
+      <!-- Left side: Two videos side by side -->
+      <div class="video-column">
+        <div class="video-row">
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/SGzYi5Bn2Cg"
+              title="Video 1"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+  
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/X34SBfiT7xo?start=172"
+              title="Video 2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+<body>
+  <div class="container">
+    <div class="banner">
+        <nav>
+            <ul>
+                 <li><a href="about-us.html">Home</a></li>
+                <li><a href="workout-helper.html">Workout Planner</a></li>
+                <li><a href="membership-form.html">Membership</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="form-container">   
+    <h2>Workout Decision Helper</h2>
+    <form id="workout-form">
+      <label for="goal">Your Goal:</label>
+      <select id="goal" required>
+        <option value="">--Select--</option>
+        <option value="build">Build Muscle</option>
+        <option value="lose">Lose Fat</option>
+        <option value="endurance">Improve Endurance</option>
+      </select>
+
+      <label for="equipment">Available Equipment:</label>
+      <select id="equipment" required>
+        <option value="">--Select--</option>
+        <option value="none">None (Bodyweight)</option>
+        <option value="dumbbells">Dumbbells</option>
+        <option value="gym">Full Gym</option>
+      </select>
+
+      <button type="submit">Find Workout</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('workout-form');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const goal = document.getElementById('goal').value;
+      const equipment = document.getElementById('equipment').value;
+
+      let workout = "";
+
+      if (goal === "build") {
+        if (equipment === "none") workout = "Push-ups, Dips on chairs, Squats";
+        else if (equipment === "dumbbells") workout = "Dumbbell Press, Goblet Squats, Rows";
+        else if (equipment === "gym") workout = "Bench Press, Deadlifts, Pull-ups";
+      } else if (goal === "lose") {
+        if (equipment === "none") workout = "Burpees, Jump Squats, Mountain Climbers";
+        else if (equipment === "dumbbells") workout = "Dumbbell Thrusters, Jump Lunges, Swings";
+        else if (equipment === "gym") workout = "HIIT Circuit: Treadmill, Battle Ropes, Rowing";
+      } else if (goal === "endurance") {
+        if (equipment === "none") workout = "Jumping Jacks, Jogging in place, High Knees";
+        else if (equipment === "dumbbells") workout = "Light Dumbbell Complexes";
+        else if (equipment === "gym") workout = "Treadmill Run, Bike, Row Machine (30 mins)";
+      }
+
+      resultDiv.innerHTML = `<h2>Recommended Workout:</h2><p>${workout}</p>`;
+    });
+  </script>
+</body>
+</html>
